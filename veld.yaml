@@ -3,13 +3,17 @@ x-veld:
     about:
       description: "dummy veld for testing and showcasing"
     output:
-      path: /veld/output/data.json
-      format: "json"
-      kind: "dummy data"
+      a:
+        path: /veld/output/a/data.json
+        format: "json"
+        kind: "dummy data"
+      b:
+        path: /veld/output/b/log.txt
+        format: "txt"
+        kind: "dummy data"
 
 services:
   veld:
     build: .
-    command: sh -c "wget https://dummyjson.com/posts/50 -O /veld/output/data.json; echo xx"
-#    command: sh -c "wget https://dummyjson.com/posts/$(($RANDOM %100 + 1)) -O /veld/output/data.json"
+    command: sh -c "wget https://dummyjson.com/posts/$$(($$RANDOM %100 + 1)) -O /veld/output/a/data.json"
 
