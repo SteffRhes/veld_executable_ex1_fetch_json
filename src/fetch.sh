@@ -1,7 +1,7 @@
 out_data=/veld/output/a/data.json
 out_log=/veld/output/b/log_fetch.txt
 
-echo "------------------------------------------------------------------" >> $out_log
+> $out_log
 echo "fetching data at $(date -Is)" >> $out_log
 rand_int=$(($RANDOM %100 + 1))
 echo "random id: ${rand_int}" >> $out_log
