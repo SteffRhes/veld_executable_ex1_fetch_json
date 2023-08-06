@@ -8,12 +8,14 @@ x-veld:
         format: "json"
         kind: "dummy data"
       b:
-        path: /veld/output/b/log.txt
+        path: /veld/output/b/log_fetch.txt
         format: "txt"
         kind: "dummy data"
 
 services:
   veld:
     build: .
-    command: sh -c "wget https://dummyjson.com/posts/$$(($$RANDOM %100 + 1)) -O /veld/output/a/data.json"
+    volumes:
+      - ./src/:/veld/executable/
+    command: sh /veld/executable/fetch.sh
 
