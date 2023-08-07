@@ -8,7 +8,7 @@ x-veld:
         format: "json"
         kind: "dummy data"
       b:
-        path: /veld/output/b/log_fetch.txt
+        path: /veld/output/b/log.txt
         format: "txt"
         kind: "dummy data"
 
