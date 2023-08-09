@@ -16,6 +16,6 @@ services:
   veld:
     build: .
     volumes:
-      - ./src/:/veld/executable/
+      - ./fetch.sh:/veld/executable/fetch.sh
     command: sh /veld/executable/fetch.sh
 
