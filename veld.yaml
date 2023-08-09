@@ -1,15 +1,15 @@
 x-veld:
   executable:
     about:
-      description: "dummy veld for testing and showcasing"
+      description: "example veld for testing and showcasing"
     input:
       type: "environment variable"
-      id: "id"
+      name: "id"
     output:
       type: "files"
       format: "json"
-      path: /veld/output/data.json
       content: "dummy data"
+      path: /veld/output/data.json
 
 services:
   veld:
