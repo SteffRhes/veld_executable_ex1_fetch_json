@@ -12,9 +12,9 @@ x-veld:
       # full text description of this executable
       description: "example veld for testing and showcasing"
 
-      # the `topics` key can describe the general task area a VELD is concerned with. It's an
+      # the `topics` keyword can describe the general task area a VELD is concerned with. It's an
       # attribute that is not used by any VELD code, but meant for devs to describe their VELD, and
-      # to make it discoverable for other devs to increase reusability
+      # to make it discoverable for other devs for reusability
       topics: 
         - "REST API"
         - "ETL"
@@ -24,14 +24,14 @@ x-veld:
 
       # `type` will take values from a controlled vocabulary which is to be developed. 
       # Here, this VELD executable needs an environment variable defined via the `environment` 
-      # section of the VELD chain service. It is optional, since if it's empty, the fetcher will
-      # download all json files from the dummy resource
-      type: "environment variable"
+      # section of the VELD chain service.      type: "environment variable"
 
       # the name of the variable, e.g. `id: 42`
       name: "id"
-
-      # is optional. If no `optional` keys is defined, then it defaults to `optional: false`
+      
+      # In this case, the input is optional, since if it's empty, the fetcher will download all json
+      # files from the dummy resource. 
+      # In general, if an input has no `optional` key, then it defaults to `optional: false`
       optional: true
 
     # `output` describes the requirements on the outgoing side of this VELD's interoperability
