@@ -24,7 +24,8 @@ x-veld:
 
       # `type` will take values from a controlled vocabulary which is to be developed. 
       # Here, this VELD executable needs an environment variable defined via the `environment` 
-      # section of the VELD chain service.      type: "environment variable"
+      # section of the VELD chain service.      
+      type: "environment variable"
 
       # the name of the variable, e.g. `id: 42`
       name: "id"
